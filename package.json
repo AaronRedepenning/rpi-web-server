@@ -1,0 +1,18 @@
+{
+  "name": "rpi-web-server",
+  "version": "1.0.0",
+  "description": "Web server for raspberry pi",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Aaron Redepenning",
+  "license": "ISC",
+  "dependencies": {
+    "chart.js": "^2.7.1",
+    "express": "^4.16.2",
+    "os-utils": "0.0.14",
+    "shelljs": "^0.7.8",
+    "socket.io": "^2.0.4"
+  }
+}
