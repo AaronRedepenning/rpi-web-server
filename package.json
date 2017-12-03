@@ -2,9 +2,15 @@
   "name": "rpi-web-server",
   "version": "1.0.0",
   "description": "Web server for raspberry pi",
-  "main": "app.js",
+  "main": "server/app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "sudo node server/app.js",
+    "postinstall": "./build-dist.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/AaronRedepenning/rpi-web-server.git"
   },
   "author": "Aaron Redepenning",
   "license": "ISC",

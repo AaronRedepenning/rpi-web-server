@@ -9,14 +9,14 @@ var shell   = require('shelljs');
 app.use(express.static(path.join(__dirname, '..', 'client')));
 
 app.post('/cpu', function() {
-    shell.exec('sudo ./benchmark.sh', {silent: false, async: true});
+    var cmd = shell.exec('sudo ./server/benchmark.sh', {silent: false, async: true});
 });
 
 io.on('connection', function(socket){
     console.log('a user connected');
     setInterval(function() {
         os.cpuUsage(function(use) {
-            io.emit('cpu-stats', JSON.stringify(use));
+            io.emit('cpu-stats', JSON.stringify(use * 100));
         });
     }, 1000);
 });
